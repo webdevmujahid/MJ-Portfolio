@@ -1,0 +1,452 @@
+@font-face {
+  font-family: azonix;
+  src: url(../font/Azonix.otf);
+}
+@font-face {
+  font-family: lack;
+  src: url(../font/lack-regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  scroll-behavior: smooth;
+  background-color: #100720;
+}
+html {
+  color: rgb(255, 255, 255);
+}
+a {
+  text-decoration: none;
+}
+
+.logo_and_navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: blue; */
+  height: 120px;
+}
+.logo_and_navigation .mylogo {
+  font-size: 32px;
+  font-family: azonix, sans-serif;
+  color: #ffffff;
+}
+.nav {
+  width: 100%;
+}
+header .logo_and_navigation nav ul {
+  list-style: none;
+  display: flex;
+}
+header .logo_and_navigation nav ul li a {
+  text-decoration: none;
+  padding: 8px;
+  color: white;
+  display: inline-block;
+  margin-right: 42px;
+  transition: all 0.6s;
+}
+nav ul li a::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  display: block;
+  background-color: white;
+
+  transition: all 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+/* rectangle  */
+
+header .round_rectangle img {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  z-index: -1;
+  width: 1090px;
+}
+/* section one  */
+.section_one .my_info p {
+  font-size: 18px;
+  font-family: lack, sans-serif;
+  color: #0f5bc9;
+  width: 55%;
+  margin: 30px 0;
+}
+.section_one .my_info h2 {
+  font-size: 48px;
+  font-family: azonix, sans-serif;
+  color: #0f5bc9;
+  background-image: url(../images/heading_images/h1image2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-name: anime_h2;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+/* to animate section one h2  */
+@keyframes anime_h2 {
+  0% {
+    background-position: center;
+  }
+  30% {
+    background-position: top;
+  }
+  70% {
+    background-position: center;
+  }
+  80% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: center;
+  }
+}
+.section_one {
+  max-width: 920px;
+  margin: auto;
+}
+.section_one {
+  margin-top: 190px;
+}
+.section_one .my_info a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 13px;
+  font-size: 14px;
+  font-family: azonix, sans-serif;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  background-color: #0f5bc9;
+  transition: all 0.5s;
+}
+.section_one .my_info a:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px rgb(13, 0, 255);
+  color: #0f5bc9;
+}
+
+/* section two  */
+
+.section_two {
+  margin: 130px 0px;
+}
+
+.section_two .about_me {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.section_two h2 {
+  position: relative;
+  padding-bottom: 30px;
+  text-align: center;
+  margin-bottom: 54px;
+  font-family: azonix, sans-serif;
+  font-size: 24px;
+  color: #0f5bc9;
+}
+.section_two h2::after {
+  content: "";
+  background-image: url(../images/about_me/underline_img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 24px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -49%);
+}
+
+.image_vector img {
+  width: 338px;
+  height: 365px;
+  /* border: 1px solid black; */
+}
+
+.my_image .profile_img img {
+  width: 165px;
+  height: 163px;
+}
+.image_vector {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.image_vector .profile_img {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.my_image {
+  position: relative;
+  left: 82px;
+}
+.my_image .design_vector {
+  position: absolute;
+  top: 51px;
+  left: -6px;
+  transform: rotate(-180deg) translateY(122px) translateX(-120px);
+}
+.my_image .design_vector img {
+  width: 267px;
+  height: 250px;
+  display: inline-block;
+  animation-name: fade_in_out;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+/* section two design_vector animation  */
+@keyframes fade_in_out {
+  0% {
+    scale: 1;
+  }
+  70% {
+    scale: 0.8;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.my_image .design_vector img:nth-child(2n) {
+  transform: rotate(0deg) translatex(16px) translateY(17px);
+}
+.my_image .design_vector img:nth-child(2n + 1) {
+  transform: rotate(0deg) translatex(1px) translateY(-22px);
+}
+
+.my_info .my_heading h2 {
+  font-family: azonix, sans-serif;
+  text-align: center;
+}
+.my_info .my_heading p {
+  font-family: lack, sans-serif;
+  width: 537px;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 10px;
+}
+.my_info .my_heading .project_num {
+  font-size: 24px;
+  color: #150094;
+  margin-right: 5px;
+}
+.my_info .my_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cv_download_btn a {
+  padding: 10px;
+  background-color: #150094;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: block;
+  font-family: lack, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+.cv_download_btn a::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  z-index: -1;
+  position: absolute;
+  left: -11px;
+  bottom: 0;
+  background-color: #00f0ff;
+  transition: all 0.7s;
+}
+.cv_download_btn p.download_cv {
+  font-family: lack, sans-serifs;
+  font-size: 18px;
+  width: 73%;
+  border-radius: 10px;
+  padding: 4px;
+  transition: all 0.5s;
+}
+.cv_download_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 47px;
+}
+
+.cv_download_btn:hover a::before {
+  left: 13px;
+  opacity: 0;
+  box-shadow: 0px 0px 15px rgb(13, 0, 255);
+}
+.cv_download_btn:hover p {
+  background-color: #00f0ff;
+  color: #100720;
+  box-shadow: 0px 0px 15px rgb(13, 0, 255);
+  /* z-index: -3; */
+}
+
+@media only screen and (max-width: 500px) {
+  .logo_and_navigation {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mylogo {
+    padding-left: 42px;
+    color: #ffffff !important;
+    margin-top: 27px;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .nav_ul_toggle {
+    height: 100%;
+  }
+  header .logo_and_navigation nav ul li a {
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+  .breadcrumb {
+    position: absolute;
+    top: 30px;
+    right: 42px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .breadcrumb div {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: all 0.5s;
+  }
+  .nav_active {
+    display: block;
+  }
+  .breadcrumb_active .breadcrumb_middle {
+    display: none;
+  }
+  .breadcrumb_active .breadcrumb_top {
+    transform: rotate(43deg) translateY(6px) translateX(3px);
+  }
+  .breadcrumb_active .breadcrumb_bottom {
+    transform: rotate(-44deg) translateY(-3px) translateX(-1px);
+  }
+
+  .round_rectangle img {
+    height: 480px;
+    width: 925;
+  }
+  .rectangle_img {
+    height: 200px;
+  }
+  /* section one  */
+
+  .section_one .my_info p {
+    font-size: 14px;
+    margin: 30px 0px;
+  }
+  .section_one .my_info h2 {
+    font-size: 24px;
+  }
+  .section_one .my_info a {
+    font-size: 14px;
+  }
+
+  .section_one {
+    width: 100%;
+    text-align: center;
+
+    padding: 20px;
+    margin-top: 190px;
+  }
+  .section_one .my_info p {
+    width: 100%;
+  }
+
+  /* section two  */
+
+  .about_me {
+    flex-direction: column;
+  }
+
+  .my_image {
+    left: 0;
+  }
+  .image_vector img {
+    width: 312px;
+    height: 309px;
+  }
+  .my_image .design_vector img {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+  }
+  .my_image .design_vector {
+    position: absolute;
+    top: 303px;
+    left: -154px;
+    transform: rotate(-180deg) translateY(157px) translateX(-120px);
+  }
+  .my_image .design_vector img:nth-child(2n) {
+    transform: rotate(107deg) translatex(220px) translateY(-102px);
+  }
+  .my_image .design_vector img:nth-child(2n + 1) {
+    transform: rotate(0deg) translatex(0px) translateY(0px);
+  }
+  @keyframes fade_in_out {
+    0% {
+      scale: 1;
+    }
+    70% {
+      scale: 0.8;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+  .my_info .my_heading p {
+    font-family: lack, sans-serif;
+    width: 100%;
+    font-size: 14px;
+    line-height: 32px;
+    padding: 12px;
+    text-align: center;
+  }
+  .cv_download_btn p.download_cv {
+    width: 73% !important;
+    padding: 4px;
+  }
+}
