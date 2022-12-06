@@ -13,10 +13,11 @@
 }
 body {
   scroll-behavior: smooth;
-  background-color: #100720;
+  /* background-color: #100720; */
+  background-color: #040032;
 }
 html {
-  color: rgb(255, 255, 255);
+  color: rgb(249, 249, 249);
 }
 a {
   text-decoration: none;
@@ -88,7 +89,7 @@ header .round_rectangle img {
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation-name: anime_h2;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -235,7 +236,7 @@ header .round_rectangle img {
 .my_info .my_heading p {
   font-family: lack, sans-serif;
   width: 537px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 32px;
   padding: 10px;
 }
@@ -302,6 +303,104 @@ header .round_rectangle img {
   /* z-index: -3; */
 }
 
+/* section three  */
+
+.navs_and_qualification {
+  /* border: 1px solid rgb(255, 255, 255); */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-left: 160px;
+}
+
+.navs_and_qualification .qualification {
+  width: 70%;
+  height: 500px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  transition: all 0.5s;
+}
+
+.navs_and_qualification .vertical_nav {
+  width: 30%;
+}
+
+.skills_education {
+  height: 500px;
+}
+.vertical_nav nav ul {
+  list-style-type: none;
+}
+.vertical_nav nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #00f0ff;
+  font-size: 16px;
+  font-family: azonix, sans-serif;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+.vertical_nav nav ul li a.active_vertical_nav {
+  color: white;
+}
+.vertical_nav nav ul li a::after {
+  display: none;
+}
+.navs_and_qualification .qualification h1 {
+  margin: 10px;
+  color: #00f0ff;
+  font-family: lack, sans-serif;
+  font-size: 32px;
+  position: relative;
+  display: inline-block;
+}
+.navs_and_qualification .qualification h1::before {
+  content: "";
+  height: 5px;
+  width: 10%;
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  background-color: #ff0000;
+}
+.navs_and_qualification .qualification h2 {
+  font-family: lack, sans-serif;
+  font-size: 24px;
+  color: #c7f2a4;
+}
+.navs_and_qualification .qualification .card_info h3 {
+  font-size: 18px;
+  font-family: lack, sans-serif;
+}
+.navs_and_qualification .qualification p {
+  font-family: lack, sans-serif;
+  font-size: 16px;
+}
+.navs_and_qualification .qualification p,
+h3 {
+  color: #b4cde6;
+}
+.navs_and_qualification .qualification .card_body h2 {
+  padding-bottom: 10px;
+}
+/* .navs_and_qualification .qualification  {
+padding: 10px;
+margin: 27px 0px;
+} */
+.navs_and_qualification .qualification .card_info,
+.card_title {
+  padding: 10px;
+  line-height: 28px;
+}
+.navs_and_qualification .qualification .card_body {
+  padding: 10px;
+  line-height: 25px;
+}
+
 @media only screen and (max-width: 500px) {
   .logo_and_navigation {
     justify-content: space-between;
@@ -314,11 +413,11 @@ header .round_rectangle img {
     margin-top: 27px;
   }
 
-  nav {
+  .logo_and_navigation nav {
     width: 100%;
     margin-top: 10px;
   }
-  nav ul {
+  .logo_and_navigation nav ul {
     flex-direction: column;
     width: 100%;
     text-align: center;
@@ -328,7 +427,7 @@ header .round_rectangle img {
   }
 
   .nav_ul_toggle {
-    height: 100%;
+    height: 100% !important;
   }
   header .logo_and_navigation nav ul li a {
     margin-right: 0px;
@@ -421,10 +520,10 @@ header .round_rectangle img {
     transform: rotate(-180deg) translateY(157px) translateX(-120px);
   }
   .my_image .design_vector img:nth-child(2n) {
-    transform: rotate(107deg) translatex(220px) translateY(-102px);
+    transform: rotate(107deg) translatex(260px) translateY(-60px);
   }
   .my_image .design_vector img:nth-child(2n + 1) {
-    transform: rotate(0deg) translatex(0px) translateY(0px);
+    transform: rotate(0deg) translatex(19px) translateY(0px);
   }
   @keyframes fade_in_out {
     0% {
@@ -448,5 +547,24 @@ header .round_rectangle img {
   .cv_download_btn p.download_cv {
     width: 73% !important;
     padding: 4px;
+  }
+
+  /* section three  */
+
+  .navs_and_qualification {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  .navs_and_qualification .vertical_nav {
+    width: 100%;
+    text-align: left;
+  }
+  .navs_and_qualification .vertical_nav nav {
+    margin: 10px;
+  }
+  .navs_and_qualification .qualification {
+    width: 100%;
+    margin-top: 40px;
   }
 }
