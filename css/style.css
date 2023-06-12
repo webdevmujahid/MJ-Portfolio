@@ -324,6 +324,9 @@ header .round_rectangle img {
   scroll-behavior: smooth;
   transition: all 0.5s;
 }
+.navs_and_qualification .qualification::-webkit-scrollbar{
+  display: none !important;
+}
 
 .navs_and_qualification .vertical_nav {
   width: 30%;
